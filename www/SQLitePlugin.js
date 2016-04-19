@@ -254,12 +254,12 @@
 
   SQLitePlugin.prototype.sqlBatch = function(sqlStatements, success, error) {
     var batchList, j, len1, myfn, st;
-    if (!sqlStatements ) {
-      throw newSQLError('sqlBatch expects an array. Type: undefined' );
-    }
-    if (sqlStatements.constructor !== Array) {
-       throw newSQLError('sqlBatch expects an array. Type: ' + sqlStatements.constructor );
-    }
+//    if (!sqlStatements ) {
+//      throw newSQLError('sqlBatch expects an array. Type: undefined' );
+//    }
+//    if (sqlStatements.constructor !== Array) {
+//       throw newSQLError('sqlBatch expects an array. Type: ' + sqlStatements.constructor );
+//    }
     batchList = [];
     for (j = 0, len1 = sqlStatements.length; j < len1; j++) {
       st = sqlStatements[j];
@@ -352,13 +352,13 @@
   SQLitePluginTransaction.prototype.addStatement = function(sql, values, success, error) {
     var j, len1, params, t, v;
     params = [];
-    if (!!values && values.constructor === Array) {
+//    if (!!values && values.constructor === Array) {
       for (j = 0, len1 = values.length; j < len1; j++) {
         v = values[j];
         t = typeof v;
         params.push((v === null || v === void 0 || t === 'number' || t === 'string' ? v : v instanceof Blob ? v.valueOf() : v.toString()));
       }
-    }
+//    }
     this.executes.push({
       success: success,
       error: error,
