@@ -254,8 +254,11 @@
 
   SQLitePlugin.prototype.sqlBatch = function(sqlStatements, success, error) {
     var batchList, j, len1, myfn, st;
-    if (!sqlStatements || sqlStatements.constructor !== Array) {
-      throw newSQLError('sqlBatch expects an array. Type: ' + sqlStatements.constructor );
+    if (!sqlStatements ) {
+      throw newSQLError('sqlBatch expects an array. Type: undefined' );
+    }
+    if (sqlStatements.constructor !== Array) {
+       throw newSQLError('sqlBatch expects an array. Type: ' + sqlStatements.constructor );
     }
     batchList = [];
     for (j = 0, len1 = sqlStatements.length; j < len1; j++) {
