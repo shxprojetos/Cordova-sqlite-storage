@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/litehelpers/Cordova-sqlite-storage.git"
+    "url": "https://github.com/fernandosassaki/Cordova-sqlite-storage.git"
   },
   "keywords": [
     "sqlite",
@@ -28,7 +28,7 @@
   "author": "various",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/litehelpers/Cordova-sqlite-storage/issues"
+    "url": "https://github.com/fernandosassaki/Cordova-sqlite-storage/issues"
   },
-  "homepage": "https://github.com/litehelpers/Cordova-sqlite-storage"
+  "homepage": "https://github.com/fernandosassaki/Cordova-sqlite-storage"
 }
